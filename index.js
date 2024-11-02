@@ -4,11 +4,22 @@ const cors = require('cors');
 const path = require('path');
 const app = express();
 require('dotenv').config();
-app.use(cors());
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public'))); 
 
 const PORT = process.env.PORT || 5000;
+const allowedOrigins = ['https://yourfrontend.com']; // Update with your frontend domain
+
+// Middleware
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, 'public')));
 
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
@@ -20,6 +31,10 @@ const transporter = nodemailer.createTransport({
 
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
+
+  if (!name || !email || !message) {
+    return res.status(400).json({ message: 'Name, email, and message are required.' });
+  }
 
   const userMailOptions = {
     from: `"DevUneX Support" <${process.env.EMAIL_USER}>`,
@@ -41,9 +56,9 @@ app.post('/send-email', async (req, res) => {
     `,
     attachments: [
       {
-        filename: 'DevUne.png', 
-        path: path.join(__dirname, 'public', 'DevUne.png'), 
-        cid: 'logo' 
+        filename: 'DevUne.png',
+        path: path.join(__dirname, 'public', 'DevUne.png'),
+        cid: 'logo'
       }
     ]
   };
@@ -66,15 +81,12 @@ app.post('/send-email', async (req, res) => {
   };
 
   try {
-    
     await transporter.sendMail(userMailOptions);
-
     await transporter.sendMail(ownerMailOptions);
-
     res.status(200).json({ message: 'Emails sent successfully' });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Error sending email' });
+    console.error('Failed to send email:', error.message);
+    res.status(500).json({ message: 'Error sending email', error: error.message });
   }
 });
 
