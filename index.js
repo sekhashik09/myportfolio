@@ -4,15 +4,15 @@ const cors = require('cors');
 const path = require('path');
 const app = express();
 require('dotenv').config();
+app.use(cors());
+app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 
-app.use(cors())
-app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
-
 const transporter = nodemailer.createTransport({
-  service: 'Gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // true for 465, false for other ports
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -22,10 +22,6 @@ const transporter = nodemailer.createTransport({
 app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
-  if (!name || !email || !message) {
-    return res.status(400).json({ message: 'Name, email, and message are required.' });
-  }
-
   const userMailOptions = {
     from: `"DevUneX Support" <${process.env.EMAIL_USER}>`,
     to: email,
@@ -34,9 +30,8 @@ app.post('/send-email', async (req, res) => {
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
           <h2 style="color: #007bff; text-align: center;">Thank You, ${name}!</h2>
           <div style="text-align: center; margin-bottom: 20px;">
-              <img src="cid:logo" alt="DevUneX Logo" width="150" style="margin-bottom: 20px;">
           </div>
-          <p style="color: #333;">We appreciate you reaching out to us. Our team will review your message and get back to you as soon as possible.</p>
+          <p style="color: #333;">I appreciate you reaching out to me. I will review your message and get back to you as soon as possible.</p>
           <p style="color: #333;">Here's a copy of your message:</p>
           <div style="background-color: #f7f7f7; padding: 10px; border-radius: 5px; margin: 20px 0;">
               <p><strong>Message:</strong> ${message}</p>
@@ -44,13 +39,6 @@ app.post('/send-email', async (req, res) => {
           <p style="color: #333;">Best regards,<br/>DevUneX.</p>
       </div>
     `,
-    attachments: [
-      {
-        filename: 'DevUne.png',
-        path: path.join('public', 'DevUne.png'),
-        cid: 'logo'
-      }
-    ]
   };
 
   const ownerMailOptions = {
@@ -71,12 +59,16 @@ app.post('/send-email', async (req, res) => {
   };
 
   try {
+    // Send email to the user with attachment
     await transporter.sendMail(userMailOptions);
+
+    // Send notification email to the owner without attachment
     await transporter.sendMail(ownerMailOptions);
+
     res.status(200).json({ message: 'Emails sent successfully' });
   } catch (error) {
-    console.error('Failed to send email:', error.message);
-    res.status(500).json({ message: 'Error sending email', error: error.message });
+    console.error('Error sending email:', error);
+    res.status(500).json({ message: 'Error sending email' });
   }
 });
 
