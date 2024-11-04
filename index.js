@@ -23,7 +23,7 @@ app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
   const userMailOptions = {
-    from: `"DevUne<span style="color: #13bbff">X.</span> Support" <${process.env.EMAIL_USER}>`,
+    from: `"DevUneX. Support" <${process.env.EMAIL_USER}>`,
     to: email,
     subject: 'Thank You for Contacting Me!',
     html: `
