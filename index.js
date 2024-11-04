@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 5000;
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 465,
-  secure: true, // true for 465, false for other ports
+  secure: true, 
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -23,7 +23,7 @@ app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
   const userMailOptions = {
-    from: `"DevUneX Support" <${process.env.EMAIL_USER}>`,
+    from: `"DevUne<span><span/>X Support" <${process.env.EMAIL_USER}>`,
     to: email,
     subject: 'Thank You for Contacting Me!',
     html: `
@@ -36,7 +36,7 @@ app.post('/send-email', async (req, res) => {
           <div style="background-color: #f7f7f7; padding: 10px; border-radius: 5px; margin: 20px 0;">
               <p><strong>Message:</strong> ${message}</p>
           </div>
-          <p style="color: #333;">Best regards,<br/>DevUneX.</p>
+          <p style="color: #333;">Best regards,<br/>DevUne<span>X.</p>
       </div>
     `,
   };
@@ -59,10 +59,8 @@ app.post('/send-email', async (req, res) => {
   };
 
   try {
-    // Send email to the user with attachment
     await transporter.sendMail(userMailOptions);
 
-    // Send notification email to the owner without attachment
     await transporter.sendMail(ownerMailOptions);
 
     res.status(200).json({ message: 'Emails sent successfully' });
