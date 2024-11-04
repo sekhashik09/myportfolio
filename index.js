@@ -23,7 +23,7 @@ app.post('/send-email', async (req, res) => {
   const { name, email, message } = req.body;
 
   const userMailOptions = {
-    from: `"DevUne<span><span/>X Support" <${process.env.EMAIL_USER}>`,
+    from: `"DevUne<span style="color: #13bbff">X.</span>Support" <${process.env.EMAIL_USER}>`,
     to: email,
     subject: 'Thank You for Contacting Me!',
     html: `
@@ -36,7 +36,7 @@ app.post('/send-email', async (req, res) => {
           <div style="background-color: #f7f7f7; padding: 10px; border-radius: 5px; margin: 20px 0;">
               <p><strong>Message:</strong> ${message}</p>
           </div>
-          <p style="color: #333;">Best regards,<br/>DevUne<span>X.</p>
+          <p style="color: #333;">Best regards,<br/>DevUne<span style="color: #13bbff">X.</span></p>
       </div>
     `,
   };
