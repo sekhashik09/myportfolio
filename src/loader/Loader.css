@@ -1,0 +1,51 @@
+/* Loader container styles */
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34; /* Standard dark background for contrast */
+    color: #ffffff;
+  }
+  
+  /* Loader text styles */
+  .loader-text {
+    font-size: 6rem; /* Large text size */
+    font-weight: 700; /* Bold text */
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+  }
+  
+  /* DevUne styling */
+  .devune {
+    color: #ffffff; /* White color for "DevUne" */
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* X styling */
+  .x {
+    color: #13bbff; /* Light blue for "X" */
+    animation: bounce 1.5s infinite;
+  }
+  
+  /* Pulse animation for DevUne */
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.6;
+    }
+  }
+  
+  /* Bounce animation for X */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  

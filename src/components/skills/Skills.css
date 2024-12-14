@@ -1,0 +1,58 @@
+:root{
+    --text-color: #fff;  
+    --bg-color: #1b1f24;
+    --second-bg-color: #22282f;
+    --main-color: #13bbff; 
+    --other-color: #c3cad5;
+    --h1-font: 4.5rem;
+    --h2-font: 2.9rem;
+    --p-font: 1rem;
+  }
+
+/* Skills Section */
+.skills {
+    padding: 60px 20%;
+    background-color: var(--bg-color);
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.skills-category {
+    margin-bottom: 36px;
+}
+
+.skills-category h3 {
+    font-size: 1.5em;
+    color: var(--main-color); /* Adjust color as needed */
+    margin-bottom: 10px;
+}
+
+.skills-items {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skill {
+    text-align: center;
+    width: 80px;
+}
+
+.skill img {
+    width: 72px;
+    height: 60px;
+    margin-bottom: 11px;
+    /* border-radius: 38px; */
+    /* border: 2px solid var(--main-color);  */
+}
+
+.skill p {
+    font-size: 1em;
+    color: var(--p-font);
+}

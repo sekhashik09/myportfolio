@@ -1,0 +1,92 @@
+:root{
+    --text-color: #fff;  
+    --bg-color: #1b1f24;
+    --second-bg-color: #22282f;
+    --main-color: #13bbff; 
+    --other-color: #c3cad5;
+    --h1-font: 4.5rem;
+    --h2-font: 2.9rem;
+    --p-font: 1rem;
+  }
+
+  
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 62px 16%;
+    background-color: #f4f4f4; /* Light background for contrast */
+}
+.about-text p span{
+    color: #13bbff;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--main-color); /* Use your main color variable */
+}
+
+.about-text {
+    max-width: 800px; /* Limit width for better readability */
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333; /* Dark text for contrast */
+}
+
+.about-boxes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px; /* Limit width for boxes */
+}
+
+.box {
+    flex: 1; /* Make boxes take equal space */
+    margin: 0 10px; /* Spacing between boxes */
+    padding: 20px;
+    background-color: #fff; /* White background for boxes */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--main-color); /* Use your main color variable */
+}
+
+.box p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555; /* Slightly lighter text for box content */
+}
+
+@media (max-width: 768px) {
+    .about-boxes {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center; /* Center-align boxes */
+    }
+    .box {
+        margin: 10px 0; /* Add vertical spacing between boxes */
+        width: 100%; /* Optional: Make the boxes take full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-boxes {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center;
+         /* Center-align boxes */
+    }
+    .box {
+        margin: 10px 0; /* Add vertical spacing between boxes */
+        width: 100%;
+         /* Optional: Make the boxes take full width */
+    }
+    .box h3{
+        font-size: 20px;
+    }
+}

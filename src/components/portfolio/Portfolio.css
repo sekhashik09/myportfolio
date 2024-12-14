@@ -1,0 +1,115 @@
+:root {
+    --text-color: #fff;  
+    --bg-color: #1b1f24;
+    --second-bg-color: #22282f;
+    --main-color: #13bbff; 
+    --other-color: #c3cad5;
+    --h1-font: 4.5rem;
+    --h2-font: 2.9rem;
+    --p-font: 1rem;
+}
+
+.portfolio {
+    padding: 80px 0%; 
+    background-color: var(--second-bg-color); 
+}
+
+.center-text {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.portfolio-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: space-between; /* Ensures space between items */
+    gap: 30px; /* Adds space between the cards */
+}
+
+.portfolio-card {
+    background-color: var(--second-bg-color); /* Background color for cards */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Ensures image doesn't overflow */
+    width: calc(33% - 20px); /* Width of each card, adjusting for gap */
+    max-width: 400px; /* Sets a maximum width for cards */
+    position: relative; /* For absolute positioning of overlay */
+}
+
+.portfolio-card img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Keeps the aspect ratio */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    color: #fff; /* Text color for overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.3s; /* Smooth transition */
+}
+
+.portfolio-card:hover .card-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.card-overlay h5 {
+    margin: 10px 0; /* Margin for title */
+}
+
+.card-overlay p {
+    margin-bottom: 10px; /* Margin for description */
+}
+
+.card-overlay a {
+    color: #13bbff; /* Change to your desired link color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .portfolio-card {
+        width: calc(50% - 20px); /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-card {
+        width: calc(50% - 10px); /* Smaller two-card layout */
+        gap: 15px; /* Reduce gap between cards */
+    }
+    .portfolio-flex {
+         /* Stack cards vertically */
+        align-items: center;
+        gap: 9px; /* Center cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio{
+        padding: 55px 2%;
+    }
+    .portfolio-flex {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+        gap: 9px; /* Center cards */
+    }
+    .center-text{
+        margin-top: 16px;
+        text-align: center;
+        font-size: 1em;
+    }
+    .portfolio-card {
+        width: 100%; /* Full-width cards */
+        margin: 10px 0; /* Add vertical spacing between cards */
+    }
+}

@@ -1,0 +1,81 @@
+{
+  "home": {
+    "greeting": "ନମସ୍କାର!",
+    "introduction": "ମୁଁ",
+    "name": "ସେଖ ଆଶିକ ବିଲ୍ଲା",
+    "description": "ନମସ୍କାର! ମୁଁ ଏକ ପୂର୍ଣ୍ଣ-ସ୍ଟ୍ୟାକ୍ ଡିଭେଲପର୍ ହେବା ସହିତ ପ୍ରଭାବୀ ଏବଂ ପ୍ରୟୋଗକାରୀ ଓପନ ପ୍ରୟୋଗ ବିକାଶ କରିବାରେ ରୁଚି ରଖିଛି। ମୁଁ ଉତ୍ତରଦାୟୀ ଡିଜାଇନ୍, ସହଜ ପ୍ରୟୋଗକାରୀ ଅନୁଭବ, ଏବଂ କ୍ଲାଉଡ୍-ଆଧାରିତ ସମାଧାନରେ ଦକ୍ଷ, ଏବଂ ମୁଁ ସଦା ନୂତନ ଜିଜ୍ଞାସା ଓ ଚ୍ୟାଲେଞ୍ଜ ଗ୍ରହଣ କରିବାକୁ ପ୍ରସ୍ତୁତ!",
+    "downloadCV": "ସିଭି ଡାଉନଲୋଡ୍ କରନ୍ତୁ"
+  },
+  "portfolio": {
+    "heading": "ମୋର",
+    "subheading": "ପୋର୍ଟଫୋଲିଓ",
+    "bookSellingTitle": "ପୁସ୍ତକ ବିକ୍ରୟ ୱେବସାଇଟ୍",
+    "bookSellingDescription": "ପୁସ୍ତକଗୁଡିକୁ ଅନଲାଇନ୍ ବିକ୍ରୟ କରିବାକୁ ଏକ ପୂର୍ଣ୍ଣ-ଫିଚର୍ ଇ-କମର୍ସ ପ୍ଲାଟଫର୍ମ।",
+    "qrCodeTitle": "QR କୋଡ୍ ଜେନେରେଟର୍",
+    "qrCodeDescription": "ବିଭିନ୍ନ ରଙ୍ଗ ଏବଂ ଆକୃତି ସହିତ QR କୋଡ୍ ତିଆରି କରନ୍ତୁ।",
+    "personalPortfolioTitle": "ବ୍ୟକ୍ତିଗତ ପୋର୍ଟଫୋଲିଓ",
+    "personalPortfolioDescription": "ମୋର ପ୍ରକଳ୍ପ ଏବଂ ଦକ୍ଷତାଗୁଡିକୁ ଦେଖାଉଥିବା ବ୍ୟକ୍ତିଗତ ପୋର୍ଟଫୋଲିଓ ୱେବସାଇଟ୍।",
+    "courseSeekingTitle": "କୋର୍ସ ସେଖିବା ୱେବସାଇଟ୍",
+    "courseSeekingDescription": "ବିଭିନ୍ନ କୋର୍ସଗୁଡିକୁ ଖୋଜିବା ଏବଂ ରେଜିଷ୍ଟର କରିବା ପ୍ଲାଟଫର୍ମ।",
+    "project5Title": "ପ୍ରକଳ୍ପ ଶୀର୍ଷକ 5",
+    "project5Description": "ପ୍ରକଳ୍ପ 5 ର ସଂକ୍ଷିପ୍ତ ବିବରଣୀ।"
+  },
+  "header": {
+    "logo": "DevUneX.",
+    "home": "ହୋମ୍",
+    "about": "ଆମ ଆଧାରେ",
+    "skills": "ଦକ୍ଷତା",
+    "portfolio": "ପୋର୍ଟଫୋଲିଓ",
+    "contact": "ସମ୍ପର୍କ"
+  },
+  "skills": {
+    "title": "ଦକ୍ଷତା",
+    "frontend": "ଫ୍ରଣ୍ଟେଣ୍ଡ",
+    "backend": "ବ୍ୟାକେଣ୍ଡ",
+    "cloud": "କ୍ଲାଉଡ୍ ଏବଂ ଡିଭଓପ୍ସ",
+    "tools": "ଉପକରଣ",
+    "languages": "ଭାଷାଗୁଡିକ",
+    "html": "HTML",
+    "css": "CSS",
+    "javascript": "JavaScript",
+    "react": "React.js",
+    "node": "Node.js",
+    "express": "Express.js",
+    "mongodb": "MongoDB",
+    "mysql": "MySQL",
+    "firebase": "Firebase",
+    "python": "Python",
+    "azure_cloud": "Azure Cloud",
+    "azure_vm": "Azure VM",
+    "azure_sql": "Azure SQL",
+    "azure_vnet": "Azure VNet",
+    "azure_devops": "Azure DevOps",
+    "kubernetes": "Kubernetes",
+    "terraform": "Terraform",
+    "jenkins": "Jenkins",
+    "github": "GitHub",
+    "git": "Git",
+    "postman": "Postman",
+    "docker": "Docker",
+    "webstorm": "WebStorm",
+    "vscode": "VS Code"
+  },
+  "about": {
+    "title": "ମୋର ବିଷୟରେ",
+    "intro": "ନମସ୍କାର! ମୁଁ ସେଖ ଆଶିକ ବିଲ୍ଲା, ଏକ ଉତ୍ସାହୀ ପୂର୍ଣ୍ଣ-ସ୍ଟ୍ୟାକ୍ ଡିଭେଲପର୍ ଏବଂ କ୍ଲାଉଡ୍ ଏବଂ ଡିଭଓପ୍ସ ଇଞ୍ଜିନିୟର୍। ମୁଁ ୱେବ୍ ଡିଭେଲପମେଣ୍ଟ ପ୍ରାନ୍ତୀକରଣ ଏବଂ ଅଭ୍ୟାସରେ ପ୍ରକୃତ ଭାବେ ପ୍ରବୀଣ, ଏବଂ ସେଉଁଥିରେ ଉତ୍ତମ ଗୁଣବତ୍ତା, ସ୍କେଲେବଲ୍ ଆନୁପ୍ରୟୋଗ ବିକାଶ କରିବାରେ ଦକ୍ଷ।",
+    "internship": "ମୁଁ Webguru Infosystem Pvt. Ltd. ରେ ପୂର୍ଣ୍ଣ-ସ୍ଟ୍ୟାକ୍ ଡିଭେଲପର୍ ଇଞ୍ଟର୍ନଶିପ୍ କରିଛି, ଯେଉଁଠାରେ ମୋତେ ଆଧୁନିକ ପ୍ରବିଧିଗୁଡିକ ବ୍ୟବହାର କରି ୱେବ୍ ଆନୁପ୍ରୟୋଗ ବିକାଶ କରିବାର ପ୍ରାକ୍ଟିକାଲ୍ ଅନୁଭବ ମିଳିଛି। ଏହି ସୁଯୋଗ ମୋତେ ରୋମାଞ୍ଚକ ପ୍ରକଳ୍ପଗୁଡିକୁ ଚାଲାଇବା, ଏକ ପ୍ରତିଭାଶାଳୀ ଦଳ ସହ କାମ କରିବା ଏବଂ ସମସ୍ୟା ସମାଧାନ କରିବାରେ ମୋର ସ୍କିଲ୍ ବଢ଼ାଇବାରେ ସହଯୋଗ କରିଛି।",
+    "learning": "ମୁଁ ସଦା ନୂତନ ପ୍ରବିଧିଗୁଡିକୁ ଶିକିବାକୁ ପ୍ରସ୍ତୁତ ଓ ଉଦ୍ୟମୀ, ଏବଂ ଶିକ୍ଷାରେ ନିରନ୍ତର ସହଯୋଗ ଓ ଟିମ୍ ବେସ୍ ଅପ୍ରୋଚ୍ ବିଶ୍ବାସ କରେ।",
+    "education": "ଶିକ୍ଷା",
+    "experience": "ଅନୁଭବ",
+    "bca": "BCA - ବ୍ରେନ୍ୱେୟର୍ ୟୁନିଭର୍ସିଟି, କୋଲକାତା",
+    "vocational": "କମ୍ପ୍ୟୁଟର୍ ସାଇନ୍ସରେ ବ୍ୟବସାୟିକ ଶିକ୍ଷା - ବସିରହଟ୍ ନାଇହାଟି NCM ଶିକ୍ଷା ନିକେତନ",
+    "secondary": "ସେକଣ୍ଡରୀ ଶିକ୍ଷା - ସଙ୍ଗରାମପୁର BKAC ଇଂସ୍ଟିଟ୍ୟୁସନ୍"
+  },
+  "contact": {
+    "title": "ସମ୍ପର୍କ କରନ୍ତୁ",
+    "email": "ଇମେଲ୍",
+    "phone": "ଫୋନ୍",
+    "address": "ଠିକଣା",
+    "sendMessage": "ଦେଖିବା"
+  }
+}
